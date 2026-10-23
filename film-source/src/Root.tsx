@@ -1,2 +1,8 @@
-import {Composition,Folder} from 'remotion';import {Film} from './Film';import {Opening} from './Opening';import {ProductScene} from './ProductScene';import {Ending} from './Ending';
-export const RemotionRoot=()=> <><Composition id="Intro" component={Film} width={1920} height={1200} fps={30} durationInFrames={480}/><Composition id="IntroSquare" component={Film} width={1200} height={1240} fps={30} durationInFrames={480}/><Composition id="IntroMobile" component={Film} width={1080} height={2340} fps={30} durationInFrames={480}/><Folder name="Scenes"><Composition id="Opening" component={Opening} width={1920} height={1200} fps={30} durationInFrames={120}/><Composition id="Evidence" component={ProductScene} width={1920} height={1200} fps={30} durationInFrames={120} defaultProps={{screen:'comparison',title:'Two sites. Every unknown visible.',kicker:'01 / COMPARE SITE EVIDENCE'}}/><Composition id="Ending" component={Ending} width={1920} height={1200} fps={30} durationInFrames={75}/></Folder></>;
+import {Composition} from 'remotion';import {Film} from './Film';
+export const RemotionRoot=()=> <>
+<Composition id="Intro" component={Film} width={1500} height={1000} fps={30} durationInFrames={360}/>
+<Composition id="IntroWide" component={Film} width={1920} height={984} fps={30} durationInFrames={360}/>
+<Composition id="IntroSquare" component={Film} width={1200} height={1200} fps={30} durationInFrames={360}/>
+<Composition id="IntroTall" component={Film} width={1050} height={1400} fps={30} durationInFrames={360}/>
+<Composition id="IntroMobile" component={Film} width={900} height={1800} fps={30} durationInFrames={360}/>
+</>;

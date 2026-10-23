@@ -1,24 +1,34 @@
-# InterConnectTrack intro — enlarged, sharp product walkthrough
+# InterConnectTrack intro
 
-16-second silent film, 30 fps. Real infrastructure photography leads into the website's synthetic evidence records, queue revision and engineer review packet.
+12-second silent product film, 30 fps. Three scenes: compare two sites, trace a changed study date, prepare an evidence packet. Photos are illustrative; the records are synthetic. Typography and UI are rendered from native HTML rather than scaled screenshots.
 
 ## Responsive outputs
-- `public/intro-desktop-v2.mp4`: 1920 × 1200.
-- `public/intro-square-v2.mp4`: 1200 × 1240, for tablet and near-square browser windows.
-- `public/intro-mobile-v2.mp4`: 1080 × 2340.
-- All are H.264, CRF 17, yuv420p. Posters use the corresponding aspect ratio.
-- Product interfaces use native HTML/vector text and the website's site artwork, replacing flattened screenshots. Source values and synthetic-data labels are retained.
-- Attribution for the opening photography is in `public/media-credits.txt`.
+
+| Composition | File suffix | Size |
+| --- | --- | --- |
+| IntroMobile | mobile | 900 × 1800 |
+| IntroTall | tall | 1050 × 1400 |
+| IntroSquare | square | 1200 × 1200 |
+| Intro | desktop | 1500 × 1000 |
+| IntroWide | wide | 1920 × 984 |
+
+Outputs live in the website's `assets/` directory: `intro-{suffix}-v3.mp4` and `intro-poster-{suffix}-v3.jpg`. H.264, CRF 20, yuv420p, fast-start metadata. The browser chooses the closest aspect ratio and fills the viewport. Only the selected video downloads.
 
 ## Edit and render
-`npm install` then `npm run dev`.
-Compositions: `Intro`, `IntroSquare`, `IntroMobile`. Scenes, timing, typography and transitions are in `src/`.
 
-`npx remotion render src/index.ts Intro public/intro-desktop-v2.mp4 --codec=h264 --crf=17 --pixel-format=yuv420p --concurrency=2`
+Run `npm ci`, then `npm run dev`. Edit `src/Film.tsx` and `src/Root.tsx`.
 
-Use the corresponding composition/output for the other formats. Supply a known-good Chromium executable using `--browser-executable` if the downloaded browser has platform issues.
+Example:
+
+```sh
+npx remotion render Intro ../assets/intro-desktop-v3.mp4 --codec=h264 --crf=20 --pixel-format=yuv420p --concurrency=1
+npx remotion still Intro ../assets/intro-poster-desktop-v3.jpg --frame=50
+```
+
+Repeat for each composition/suffix. If using a full Chrome for Testing binary, supply `--chrome-mode=chrome-for-testing --browser-executable='/absolute/path/to/chrome'`.
 
 ## Website integration
-The video fills the viewport. Aspect ratio chooses the correct variant. A live SVG logo sits in the top-left corner, remaining crisp during playback. Directional scene wipes and staggered evidence reveals are pre-rendered, with no scene-rendering runtime shipped to visitors.
 
-The navbar and underlying controls are hidden/inert during playback. End/skip dissolves the intro while the navbar enters, preserving the page's scroll geometry. Pause, skip, Escape, replay, autoplay rejection, media failure, reduced motion, data saving and deep links are handled in `dist/intro.js` in the companion website project.
+`../intro.js` handles playback, tab visibility, skip/replay, media errors, reduced motion, and data-saving preferences. `../intro.css` keeps the logo crisp as a separate SVG and the controls accessible. End/skip dissolves into the homepage and reveals the navbar without changing page scroll geometry. `node ../scripts/check-intro.cjs` exercises lifecycle and framing choices.
+
+Attribution for the infrastructure photography is in `public/media-credits.txt`. Older scene source files remain as references but are not registered in the current film.
