@@ -27,7 +27,8 @@
     const ratio=innerWidth/innerHeight;
     const frames=[['mobile',.5],['tall',.75],['square',1],['desktop',1.5],['wide',1920/984]];
     const variant=frames.reduce((best,item)=>Math.abs(Math.log(ratio/item[1]))<Math.abs(Math.log(ratio/best[1]))?item:best)[0];
-    const source='/assets/intro-'+variant+'-v3.mp4';
+    const version=variant==='tall'?'v4':'v3';
+    const source='/assets/intro-'+variant+'-'+version+'.mp4';
     video.muted=true;video.defaultMuted=true;video.playsInline=true;
     if(video.getAttribute('src')!==source){video.poster='/assets/intro-poster-'+variant+'-v3.jpg';video.src=source;video.load();}
     video.currentTime=0;progress.style.transform='scaleX(0)';toggle.textContent='Pause film';

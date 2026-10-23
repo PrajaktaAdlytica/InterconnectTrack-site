@@ -6,7 +6,7 @@ const ink='#173e35', muted='#6c7d73', copper='#aa6e4b', paper='#f7f6f0', line='#
 const ease=Easing.bezier(.22,1,.36,1);
 export const Scene=({step}:{step:number})=>{
  const f=useCurrentFrame(),{width:w,height:h,fps}=useVideoConfig();
- const portrait=w/h<.9, u=portrait?w/800:Math.min(w/900,h/850), p=w*.11;
+ const portrait=w/h<.9, compact=portrait&&w/h>.65, u=portrait?w/800:Math.min(w/900,h/850), p=w*.11;
  const enter=(delay=0)=>({opacity:interpolate(f,[delay,delay+fps*.45],[0,1],{extrapolateLeft:'clamp',extrapolateRight:'clamp'}),translate:`0 ${interpolate(f,[delay,delay+fps*.7],[28*u,0],{extrapolateLeft:'clamp',extrapolateRight:'clamp',easing:ease})}px`});
  const label={fontSize:19*u,letterSpacing:2*u,color:muted};
  const card={background:'#fffefa',border:`1px solid ${line}`,borderRadius:16*u,overflow:'hidden',boxShadow:'0 16px 40px #173e3508'};
@@ -39,9 +39,9 @@ export const Scene=({step}:{step:number})=>{
  <div style={{background:ink,color:paper,padding:28*u,display:'flex',flexDirection:portrait?'row':'column',justifyContent:'space-between',gap:16*u}}>
  {['Queue revision','Study summary','Open questions'].map((name,i)=><div key={name} style={enter(12+i*8)}><div style={{fontSize:15*u,color:'#b9c8ba',marginBottom:10*u}}>0{i+1} / SOURCE</div><div style={{fontSize:portrait?22*u:25*u,lineHeight:1.3}}>{name}</div></div>)}
  </div>
- <div style={{padding:30*u,display:'flex',flexDirection:'column',justifyContent:'space-between',gap:16*u}}>
- <div><div style={{...label,fontSize:16*u}}>PREPARED FOR HUMAN REVIEW</div><div style={{fontSize:42*u,letterSpacing:-1.5*u,lineHeight:1.1,marginTop:16*u}}>Project Evidence<br/>Packet</div></div>
- <div style={{fontSize:20*u,color:muted}}>{[['Projects','Cedar Junction + Mesa Reach'],['Snapshot','19 Oct 2026'],...(portrait?[['Status','Further evidence required']]:[])].map(([key,value],i)=><div key={key} style={{padding:`${portrait?20*u:12*u}px 0`,borderBottom:`1px solid ${line}`,display:portrait?'block':'flex',justifyContent:'space-between',alignItems:'center',gap:16*u,...enter(18+i*6)}}><div style={{fontSize:16*u,marginBottom:portrait?7*u:0}}>{key}</div><div style={{color:ink,fontSize:22*u}}>{value}</div></div>)}</div>
+ <div style={{padding:(compact?20:30)*u,display:'flex',flexDirection:'column',justifyContent:'space-between',gap:16*u}}>
+ <div><div style={{...label,fontSize:16*u}}>PREPARED FOR HUMAN REVIEW</div><div style={{fontSize:(compact?36:42)*u,letterSpacing:-1.5*u,lineHeight:1.1,marginTop:16*u}}>Project Evidence<br/>Packet</div></div>
+ <div style={{fontSize:20*u,color:muted}}>{[['Projects','Cedar Junction + Mesa Reach'],['Snapshot','19 Oct 2026'],...(portrait?[['Status','Further evidence required']]:[])].map(([key,value],i)=><div key={key} style={{padding:`${portrait&&!compact?20*u:compact?8*u:12*u}px 0`,borderBottom:`1px solid ${line}`,display:portrait&&!compact?'block':'flex',justifyContent:'space-between',alignItems:'center',gap:16*u,...enter(18+i*6)}}><div style={{fontSize:16*u,marginBottom:portrait&&!compact?7*u:0}}>{key}</div><div style={{color:ink,fontSize:22*u}}>{value}</div></div>)}</div>
  <div style={{fontSize:23*u,color:copper,...enter(35)}}>One open assumption.<br/><span style={{fontSize:18*u,color:muted}}>Preserved for the next engineer review.</span></div>
  </div></div>}
  </div>

@@ -18,7 +18,7 @@ let s=scenario();s.skip.events.click();assert(s.intro.hidden);s.replay.events.cl
 console.log('PASS: reduced motion, save-data, deep links, completion, media error, skip, replay, Escape release the page.');
 
 for(const [width,height,variant] of [[390,844,'mobile'],[556,804,'tall'],[775,804,'square'],[1440,900,'desktop'],[1920,1080,'wide']]){
- const s=scenario({width,height});assert(s.video.src.endsWith('intro-'+variant+'-v3.mp4'));assert(s.video.muted&&s.video.playsInline);
+ const s=scenario({width,height});assert(s.video.src.endsWith('intro-'+variant+'-'+(variant==='tall'?'v4':'v3')+'.mp4'));assert(s.video.muted&&s.video.playsInline);
 }
 s=scenario();s.document.hidden=true;s.events.visibilitychange();assert(s.video.paused);s.document.hidden=false;s.events.visibilitychange();assert(!s.video.paused);
 s.video.pause();s.document.hidden=true;s.events.visibilitychange();s.document.hidden=false;s.events.visibilitychange();assert(s.video.paused);

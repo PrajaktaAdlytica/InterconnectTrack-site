@@ -12,7 +12,7 @@
 | Intro | desktop | 1500 × 1000 |
 | IntroWide | wide | 1920 × 984 |
 
-Outputs live in the website's `assets/` directory: `intro-{suffix}-v3.mp4` and `intro-poster-{suffix}-v3.jpg`. H.264, CRF 20, yuv420p, fast-start metadata. The browser chooses the closest aspect ratio and fills the viewport. Only the selected video downloads.
+Outputs live in the website's `assets/` directory: `intro-{suffix}-v3.mp4` and `intro-poster-{suffix}-v3.jpg`. H.264, CRF 20, yuv420p, fast-start metadata. The browser chooses the closest aspect ratio and fills the viewport. Only the selected video downloads. The tall video is revision `v4` (same v3 poster), with compact packet rows for medium portrait screens.
 
 ## Edit and render
 
