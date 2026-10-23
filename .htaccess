@@ -1,0 +1,17 @@
+# Static HTML website on Hostinger PHP/HTML hosting.
+DirectoryIndex index.html
+Options -Indexes
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Keep authoring files and Git metadata off the public website.
+RewriteRule ^(?:\.git|\.github|_source|scripts|film-source|docs)(?:/|$) - [F,L,NC]
+RewriteRule ^(?:README\.md|HOSTINGER\.md|package(?:-lock)?\.json|\.gitignore)$ - [F,L,NC]
+</IfModule>
+
+<IfModule mod_headers.c>
+<FilesMatch "\.(?:html|css|js)$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+</IfModule>

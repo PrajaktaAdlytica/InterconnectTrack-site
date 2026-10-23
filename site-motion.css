@@ -1,0 +1,10 @@
+/* One reversible motion system; static HTML remains readable if scripts fail. */
+html.lenis,html.lenis body{height:auto}html.lenis{scroll-behavior:auto!important}
+body{overflow-x:clip}.company-address{font-style:normal;font-size:14px;line-height:1.8;margin-top:22px}.site-footer .company-address{font-size:12px;color:#55665e}.company-details .company-address{font-size:21px;margin-top:24px}
+.gsap-motion .reveal{opacity:1;transform:none;transition:none}
+.gsap-motion .artifact-visible :is(.gantt-bar,.evidence-entry,.ledger-item,.route-node,.scenario-table>div,.milestone-item,.ledger-line,.packet-sheet,.observed){animation:none}
+.gsap-motion .journey-copy,.gsap-motion .journey-art{transition:none}
+.gsap-motion [data-motion-item]{transition-property:background,color,border-color,box-shadow}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}[data-motion-item]{opacity:1!important;transform:none!important;visibility:visible!important}}
+
+#main,.site-footer{overflow-x:clip}

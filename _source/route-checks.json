@@ -1,0 +1,212 @@
+[
+  {
+    "route": "/",
+    "title": "Keep the evidence connected",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/products",
+    "title": "Five proposed products",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/platform",
+    "title": "Evidence platform",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/solutions",
+    "title": "Developer workflows",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/solutions/site-screening",
+    "title": "Developer workflow",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/solutions/application-review",
+    "title": "Developer workflow",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/solutions/portfolio-oversight",
+    "title": "Developer workflow",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/pricing",
+    "title": "Proposed pricing",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/pilot",
+    "title": "Two-site evaluation",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/resources",
+    "title": "Resources",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/resources/sample-queue-brief",
+    "title": "Sample queue brief",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/resources/evidence-packet",
+    "title": "Sample evidence packet",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/resources/interconnection-process",
+    "title": "Interconnection process",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/methodology",
+    "title": "Methodology",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/data-coverage",
+    "title": "Data coverage",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/trust",
+    "title": "Trust and boundaries",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/company",
+    "title": "Company",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/why-interconnecttrack",
+    "title": "Why InterConnectTrack",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/contact",
+    "title": "Contact",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/request-demo",
+    "title": "Request walkthrough",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/request-received",
+    "title": "Request preview",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/sign-in",
+    "title": "Workspace access",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/access-help",
+    "title": "Workspace access",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/legal/privacy",
+    "title": "Privacy for this prototype",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/legal/terms",
+    "title": "Prototype terms and limitations",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/legal/cookies",
+    "title": "Cookies and local state",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/accessibility",
+    "title": "An accessible path through the evidence",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/demo",
+    "title": "Synthetic evidence workbench",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/demo/comparison",
+    "title": "Synthetic evidence workbench",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/demo/review",
+    "title": "Synthetic evidence workbench",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/demo/packet",
+    "title": "Synthetic evidence workbench",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/demo/pilot",
+    "title": "Synthetic pilot account",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/demo/cases/SYN-101",
+    "title": "Synthetic evidence workbench",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/demo/cases/SYN-102",
+    "title": "Synthetic evidence workbench",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/products/grid-desk",
+    "title": "Grid Desk",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/products/grid-review",
+    "title": "Grid Review",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/products/grid-proof",
+    "title": "Grid Proof",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/products/grid-signal",
+    "title": "Grid Signal",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/products/grid-report",
+    "title": "Grid Report",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/demo/projects",
+    "title": "Synthetic evidence workbench",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/demo/projects/syn-101",
+    "title": "Synthetic evidence workbench",
+    "status": "rendered; internal links and assets resolve"
+  },
+  {
+    "route": "/demo/compare",
+    "title": "Synthetic evidence workbench",
+    "status": "rendered; internal links and assets resolve"
+  }
+]

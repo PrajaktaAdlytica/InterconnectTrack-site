@@ -1,0 +1,7 @@
+{
+  "name": "interconnecttrack-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static InterConnectTrack website, ready for PHP/HTML hosting",
+  "scripts": {"build": "node scripts/export-static.cjs", "check": "node scripts/export-static.cjs"}
+}
